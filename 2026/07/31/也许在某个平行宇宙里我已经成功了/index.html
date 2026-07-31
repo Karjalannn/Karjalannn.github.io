@@ -104,7 +104,8 @@
     owner: 'Karjalannn',
     admin: ['Karjalannn'],
     id: location.pathname.substring(0, 50),
-    distractionFreeMode: true
+    distractionFreeMode: true,
+    proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token' // 添加这一行代理
   })
   gitalk.render('gitalk-container')
 </script>

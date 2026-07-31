@@ -92,7 +92,22 @@
 
 
 
-
+<!-- Gitalk 评论系统 -->
+<div id="gitalk-container" style="max-width: 800px; margin: 20px auto; padding: 0 20px;"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'Ov23li9ekmeIDK9tr1VC',
+    clientSecret: '84866839aafb9548ff0cdaefd858ccdb36137399',
+    repo: 'Karjalannn.github.io',
+    owner: 'Karjalannn',
+    admin: ['Karjalannn'],
+    id: location.pathname.substring(0, 50),
+    distractionFreeMode: true
+  })
+  gitalk.render('gitalk-container')
+</script>
     </div>
   </div>
   <footer class="page-footer"><div class="clearfix">

@@ -10,7 +10,25 @@
   <rights>All rights reserved 2026, Derek</rights>
   <subtitle>漫记</subtitle>
   <title>Derek的博客</title>
-  <updated>2026-11-01T11:34:01.376Z</updated>
+  <updated>2026-11-01T12:23:02.006Z</updated>
+  <entry>
+    <author>
+      <name>Derek</name>
+    </author>
+    <category term="博客" scheme="https://karjalannn.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="折腾" scheme="https://karjalannn.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    <content>
+      <![CDATA[<p>今天花了大半天，把这个博客里里外外翻新了一遍。换主题、换评论、加搜索，顺手删掉了几个早就该删的东西。记录一下。</p><span id="more"></span><h2 id="换了个主题"><a href="#换了个主题" class="headerlink" title="换了个主题"></a>换了个主题</h2><p>原来是 <code>pln</code>，现在换成了 <a href="https://github.com/Lhcfl/hexo-theme-sosimple">SoSimple</a>。</p><p>选它的理由很简单：极简、没有花里胡哨的动画、纯 HTML 也能正常阅读。整个前端的 JS + CSS 压缩完只有二十几 KB，打开速度确实快了一截。</p><p>代价是它用 TypeScript + JSX 写模板，要编译才能用，改起来比传统的 ejs 主题麻烦一些。中间踩了两个坑：</p><ul><li>主题的源码目录和 Hexo 的模板目录打架，标签页和搜索页会直接把 TSX 源码当页面输出；</li><li>系统 PATH 里有一条带引号的坏路径，命令行找不到 pnpm，构建直接挂掉。</li></ul><p>都在本地改好后写进文档了，这里就不展开了。</p><h2 id="评论换成了-utterances"><a href="#评论换成了-utterances" class="headerlink" title="评论换成了 utterances"></a>评论换成了 utterances</h2><p>原来的 Gitalk 早就不能用了——它依赖的那个 OAuth 代理已经挂掉，点了也没反应。</p><p>现在用 <a href="https://utteranc.es/">utterances</a>：评论直接存进这个仓库的 GitHub Issues 里，不需要服务器、不需要数据库，登录 GitHub 账号就能留言。每篇文章第一次有人评论时，会自动开一个 Issue，我在 GitHub 上就能回复和管理。</p><h2 id="删掉的东西"><a href="#删掉的东西" class="headerlink" title="删掉的东西"></a>删掉的东西</h2><ul><li><strong>访问量统计</strong>。原来页面底部有个「本站总访问量」，是接的不蒜子。说实话这个数字对我也没什么意义，还要多加载一个脚本，索性整个删掉了。</li><li><strong>旧的评论代码</strong>。Gitalk 那套连同配置一起清理干净了。</li></ul><h2 id="加上的东西"><a href="#加上的东西" class="headerlink" title="加上的东西"></a>加上的东西</h2><ul><li><strong>站内搜索</strong>：导航栏的「搜索」，可以模糊匹配标题和正文，文章多了以后会很有用。</li><li><strong>文章目录</strong>：这篇没有小标题就看不到，像《记高考》那种长文，顶部会自动生成目录。</li><li><strong>标签页</strong>：按标签翻文章，现在有「生活」「投资」「高考」几个。</li><li><strong>日夜模式</strong>：右上角的「日间&#x2F;夜间」，选择会记在浏览器里。</li></ul><h2 id="顺便记两笔"><a href="#顺便记两笔" class="headerlink" title="顺便记两笔"></a>顺便记两笔</h2><p>博客的源码目前只在这台电脑上，GitHub 仓库里放的是构建出来的静态文件。等哪天有空，得把 <code>source/</code> 备份到私有仓库，不然硬盘一坏，文章就全没了。</p><p>后面还想做：阅读进度条、相关文章推荐、代码块复制按钮。慢慢来吧。</p><p>就先这样。</p>]]>
+    </content>
+    <id>https://karjalannn.github.io/2026/11/01/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%89%88%E8%AE%B0/</id>
+    <link href="https://karjalannn.github.io/2026/11/01/%E5%8D%9A%E5%AE%A2%E6%94%B9%E7%89%88%E8%AE%B0/"/>
+    <published>2026-11-01T12:18:00.000Z</published>
+    <summary>
+      <![CDATA[<p>今天花了大半天，把这个博客里里外外翻新了一遍。换主题、换评论、加搜索，顺手删掉了几个早就该删的东西。记录一下。</p>]]>
+    </summary>
+    <title>博客改版记</title>
+    <updated>2026-11-01T12:23:02.006Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Derek</name>

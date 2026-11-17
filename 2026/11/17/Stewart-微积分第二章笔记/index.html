@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="zh-cn" theme="light"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Derek"><title>Stewart 微积分第二章笔记：极限与导数 · Derek的博客</title><meta name="description" content="第一章过于基础，故略过。
+2.1 切线与速度$$m &amp;#x3D; \lim_{x \to a}\frac{f(x)-f(a)}{x-a} &amp;#x3D; \lim_{h \to 0}\frac{f(a+h)-f(a)}{h}$$
+$$v(a) &amp;#x3D; \lim_{h \to 0}\frac{s("><meta name="keywords" content="微积分,学习笔记"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="mobile-web-app-capable" content="yes"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta id="site_data_static" data-url="/"><meta name="renderer" content="webkit"><link rel="shortcut icon" type="image/x-icon" href="/images/logo.png"><link rel="stylesheet" href="/js_complied/bundle.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><script src="/js_complied/bundle.js"></script><script>Utils.loadCSS("https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css");
+Utils.loadCSS("/css/font-awesome.min.css");</script><meta name="generator" content="Hexo 7.3.0"></head><body class="post-page"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"></noscript><nav class="nav"><a href="/">首页</a>&nbsp;&nbsp;<a href="/archives">归档</a>&nbsp;&nbsp;<a href="/tags">标签</a>&nbsp;&nbsp;<a href="/about">关于</a>&nbsp;&nbsp;<a href="/search">搜索</a>&nbsp;&nbsp;<a href="javascript:SoSimple.darkLightToggle()">日间/夜间</a></nav><main class="main"><article class="post-container post-full"><header class="post-title"><h1>Stewart 微积分第二章笔记：极限与导数</h1></header><section class="post-toc"><details open><summary>目录</summary><div class="toc"><ol class="toclist"><li class="toclist-item toclist-level-2"><a class="toclist-link" href="#2-1-%E5%88%87%E7%BA%BF%E4%B8%8E%E9%80%9F%E5%BA%A6"><span class="toclist-text">2.1 切线与速度</span></a></li><li class="toclist-item toclist-level-2"><a class="toclist-link" href="#2-2-%E6%9E%81%E9%99%90%E7%9A%84%E7%9B%B4%E8%A7%82%E6%A6%82%E5%BF%B5"><span class="toclist-text">2.2 极限的直观概念</span></a></li><li class="toclist-item toclist-level-2"><a class="toclist-link" href="#2-3-%E6%9E%81%E9%99%90%E6%B3%95%E5%88%99"><span class="toclist-text">2.3 极限法则</span></a></li><li class="toclist-item toclist-level-2"><a class="toclist-link" href="#2-4-%E7%B2%BE%E7%A1%AE%E5%AE%9A%E4%B9%89"><span class="toclist-text">2.4 精确定义</span></a></li><li class="toclist-item toclist-level-2"><a class="toclist-link" href="#2-5-%E8%BF%9E%E7%BB%AD%E6%80%A7"><span class="toclist-text">2.5 连续性</span></a></li><li class="toclist-item toclist-level-2"><a class="toclist-link" href="#2-6-%E6%97%A0%E7%A9%B7%E8%BF%9C%E5%A4%84%E7%9A%84%E6%9E%81%E9%99%90"><span class="toclist-text">2.6 无穷远处的极限</span></a></li><li class="toclist-item toclist-level-2"><a class="toclist-link" href="#2-7-%E5%AF%BC%E6%95%B0"><span class="toclist-text">2.7 导数</span></a></li><li class="toclist-item toclist-level-2"><a class="toclist-link" href="#2-8-%E5%AF%BC%E5%87%BD%E6%95%B0"><span class="toclist-text">2.8 导函数</span></a></li></ol></div></details></section><section class="post-body"><p>第一章过于基础，故略过。</p>
+<h2 id="2-1-切线与速度"><a href="#2-1-切线与速度" class="headerlink" title="2.1 切线与速度"></a>2.1 切线与速度</h2><p>$$m &#x3D; \lim_{x \to a}\frac{f(x)-f(a)}{x-a} &#x3D; \lim_{h \to 0}\frac{f(a+h)-f(a)}{h}$$</p>
+<p>$$v(a) &#x3D; \lim_{h \to 0}\frac{s(a+h)-s(a)}{h}$$</p>
+<p>切线：$y - f(a) &#x3D; m(x-a)$。平均速度：$\frac{s(a+h)-s(a)}{h}$。</p>
+<h2 id="2-2-极限的直观概念"><a href="#2-2-极限的直观概念" class="headerlink" title="2.2 极限的直观概念"></a>2.2 极限的直观概念</h2><p><strong>定义 1</strong> $\lim_{x \to a}f(x) &#x3D; L$：$x$ 充分靠近 $a$ 且 $x \neq a$ 时，$f(x)$ 可任意接近 $L$。$f(a)$ 本身无关。</p>
+<p><strong>定义 2</strong> $\lim_{x \to a^-}f(x) &#x3D; L$（左极限），$\lim_{x \to a^+}f(x) &#x3D; L$（右极限）。</p>
+<p><strong>公式 (3)</strong></p>
+<p>$$\lim_{x \to a}f(x) &#x3D; L \iff \lim_{x \to a^-}f(x) &#x3D; \lim_{x \to a^+}f(x) &#x3D; L$$</p>
+<p><strong>定义 4、5</strong> $\lim_{x \to a}f(x) &#x3D; \infty$ 表示 $f(x)$ 可任意大；$&#x3D; -\infty$ 表示可任意大地为负。$\infty$ 不是数，此式表示极限不存在。</p>
+<p><strong>定义 6</strong> $x &#x3D; a$ 是垂直渐近线，若 $\lim_{x \to a}$、$\lim_{x \to a^-}$、$\lim_{x \to a^+}$ 中至少一个为 $\pm\infty$。</p>
+<h2 id="2-3-极限法则"><a href="#2-3-极限法则" class="headerlink" title="2.3 极限法则"></a>2.3 极限法则</h2><p>设 $\lim_{x \to a}f(x) &#x3D; L$，$\lim_{x \to a}g(x) &#x3D; M$ 都存在。</p>
+<p>$$\lim_{x \to a}\left[f(x) \pm g(x)\right] &#x3D; L \pm M$$</p>
+<p>$$\lim_{x \to a}\left[cf(x)\right] &#x3D; cL,\qquad \lim_{x \to a}\left[f(x)g(x)\right] &#x3D; LM$$</p>
+<p>$$\lim_{x \to a}\frac{f(x)}{g(x)} &#x3D; \frac{L}{M}\quad (M \neq 0)$$</p>
+<p>$$\lim_{x \to a}\left[f(x)\right]^n &#x3D; L^n,\qquad \lim_{x \to a}\sqrt[n]{f(x)} &#x3D; \sqrt[n]{L}$$</p>
+<p>$$\lim_{x \to a}c &#x3D; c,\qquad \lim_{x \to a}x &#x3D; a,\qquad \lim_{x \to a}x^n &#x3D; a^n,\qquad \lim_{x \to a}\sqrt[n]{x} &#x3D; \sqrt[n]{a}$$</p>
+<p><strong>定理 1</strong> 同公式 (3)：双侧存在 $\iff$ 左右都存在且相等。</p>
+<p><strong>定理 2</strong> $f(x) \le g(x) \implies \lim_{x \to a}f(x) \le \lim_{x \to a}g(x)$。</p>
+<p><strong>定理 3 夹逼定理</strong></p>
+<p>$$f \le g \le h,\quad \lim_{x \to a}f &#x3D; \lim_{x \to a}h &#x3D; L \implies \lim_{x \to a}g &#x3D; L$$</p>
+<h2 id="2-4-精确定义"><a href="#2-4-精确定义" class="headerlink" title="2.4 精确定义"></a>2.4 精确定义</h2><p><strong>定义 2</strong></p>
+<p>$$\forall \varepsilon &gt; 0,\ \exists \delta &gt; 0:\quad 0 &lt; \lvert x - a \rvert &lt; \delta \implies \lvert f(x) - L \rvert &lt; \varepsilon$$</p>
+<p><strong>定义 3、4</strong> 左极限把条件换成 $a - \delta &lt; x &lt; a$；右极限换成 $a &lt; x &lt; a + \delta$。</p>
+<p><strong>定义 6、7</strong></p>
+<p>$$\lim_{x \to a}f(x) &#x3D; \infty:\quad \forall M &gt; 0,\ \exists \delta &gt; 0,\quad 0 &lt; \lvert x - a \rvert &lt; \delta \implies f(x) &gt; M$$</p>
+<p>$$\lim_{x \to a}f(x) &#x3D; -\infty:\quad \forall N &lt; 0,\ \exists \delta &gt; 0,\quad 0 &lt; \lvert x - a \rvert &lt; \delta \implies f(x) &lt; N$$</p>
+<h2 id="2-5-连续性"><a href="#2-5-连续性" class="headerlink" title="2.5 连续性"></a>2.5 连续性</h2><p><strong>定义 1</strong> $f$ 在 $a$ 连续 $\iff$</p>
+<p>$$\lim_{x \to a}f(x) &#x3D; f(a)$$</p>
+<p>三条件：$f(a)$ 有定义、极限存在、两者相等。</p>
+<p><strong>定义 2</strong> 右连续：$\lim_{x \to a^+}f(x) &#x3D; f(a)$；左连续：$\lim_{x \to a^-}f(x) &#x3D; f(a)$。</p>
+<p><strong>定义 3</strong> 在区间上连续 &#x3D; 区间内每点连续；端点按单侧连续。</p>
+<p><strong>定理 4</strong> $f$、$g$ 在 $a$ 连续 $\implies f \pm g$、$cf$、$fg$、$f&#x2F;g$（$g(a) \neq 0$）在 $a$ 连续。</p>
+<p><strong>定理 5</strong> 多项式处处连续；有理函数在定义域内连续。</p>
+<p><strong>公式 (6)</strong></p>
+<p>$$\lim_{\theta \to 0}\cos\theta &#x3D; 1,\qquad \lim_{\theta \to 0}\sin\theta &#x3D; 0$$</p>
+<p><strong>定理 7</strong> 多项式、有理函数、根函数、三角函数、反三角函数、指数函数、对数函数都在定义域内连续。</p>
+<p><strong>定理 8</strong> $f$ 在 $b$ 连续且 $\lim_{x \to a}g(x) &#x3D; b$，则</p>
+<p>$$\lim_{x \to a}f(g(x)) &#x3D; f(b)$$</p>
+<p><strong>定理 9</strong> $g$ 在 $a$ 连续、$f$ 在 $g(a)$ 连续 $\implies f \circ g$ 在 $a$ 连续。</p>
+<p><strong>定理 10 介值定理</strong> $f$ 在 $[a,b]$ 连续，$N$ 介于 $f(a)$、$f(b)$ 之间，则</p>
+<p>$$\exists c \in (a,b):\quad f(c) &#x3D; N$$</p>
+<h2 id="2-6-无穷远处的极限"><a href="#2-6-无穷远处的极限" class="headerlink" title="2.6 无穷远处的极限"></a>2.6 无穷远处的极限</h2><p><strong>定义 1、2</strong> $\lim_{x \to \infty}f(x) &#x3D; L$：$x$ 充分大时 $f(x)$ 任意接近 $L$；$\lim_{x \to -\infty}$ 同理。</p>
+<p><strong>定义 3</strong> $y &#x3D; L$ 是水平渐近线 $\iff \lim_{x \to \infty}f(x) &#x3D; L$ 或 $\lim_{x \to -\infty}f(x) &#x3D; L$。</p>
+<p><strong>定理 5</strong> 对有理数 $r &gt; 0$，</p>
+<p>$$\lim_{x \to \infty}\frac{1}{x^r} &#x3D; 0,\qquad \lim_{x \to -\infty}\frac{1}{x^r} &#x3D; 0$$</p>
+<p><strong>公式 (6)</strong></p>
+<p>$$\lim_{x \to -\infty}e^x &#x3D; 0$$</p>
+<p><strong>定义 7、8、9</strong></p>
+<p>$$\lim_{x \to \infty}f(x) &#x3D; L:\quad \forall \varepsilon &gt; 0,\ \exists N,\quad x &gt; N \implies \lvert f(x) - L \rvert &lt; \varepsilon$$</p>
+<p>$$\lim_{x \to -\infty}f(x) &#x3D; L:\quad \forall \varepsilon &gt; 0,\ \exists N,\quad x &lt; N \implies \lvert f(x) - L \rvert &lt; \varepsilon$$</p>
+<p>$$\lim_{x \to \infty}f(x) &#x3D; \infty:\quad \forall M &gt; 0,\ \exists N,\quad x &gt; N \implies f(x) &gt; M$$</p>
+<h2 id="2-7-导数"><a href="#2-7-导数" class="headerlink" title="2.7 导数"></a>2.7 导数</h2><p><strong>定义 1</strong></p>
+<p>$$m &#x3D; \lim_{x \to a}\frac{f(x)-f(a)}{x-a}$$</p>
+<p><strong>公式 (2)</strong></p>
+<p>$$m &#x3D; \lim_{h \to 0}\frac{f(a+h)-f(a)}{h}$$</p>
+<p><strong>公式 (3)</strong></p>
+<p>$$v(a) &#x3D; \lim_{h \to 0}\frac{s(a+h)-s(a)}{h}$$</p>
+<p><strong>定义 4</strong></p>
+<p>$$f’(a) &#x3D; \lim_{h \to 0}\frac{f(a+h)-f(a)}{h}$$</p>
+<p><strong>公式 (5)</strong></p>
+<p>$$f’(a) &#x3D; \lim_{x \to a}\frac{f(x)-f(a)}{x-a}$$</p>
+<p><strong>公式 (6)</strong></p>
+<p>$$f’(a) &#x3D; \lim_{\Delta x \to 0}\frac{\Delta y}{\Delta x}$$</p>
+<p>切线：$y - f(a) &#x3D; f’(a)(x-a)$。</p>
+<h2 id="2-8-导函数"><a href="#2-8-导函数" class="headerlink" title="2.8 导函数"></a>2.8 导函数</h2><p><strong>公式 (1)(2)</strong></p>
+<p>$$f’(x) &#x3D; \lim_{h \to 0}\frac{f(x+h)-f(x)}{h}$$</p>
+<p><strong>定义</strong> $f$ 在 $a$ 可导 $\iff f’(a)$ 存在。</p>
+<p><strong>定理 4</strong> $f$ 在 $a$ 可导 $\implies$ $f$ 在 $a$ 连续。逆命题不成立：$\lvert x \rvert$ 在 0 处连续但不可导。</p>
+<p><strong>高阶导数</strong></p>
+<p>$$f’’ &#x3D; (f’)’,\qquad f^{(n)} &#x3D; \left(f^{(n-1)}\right)’$$</p>
+<p>位置函数：$s’ &#x3D; v$，$s’’ &#x3D; a$，$s’’’ &#x3D; j$（jerk）。</p>
+</section><section class="post-meta"><span class="info"><i class="fa fa-calendar"></i> <span class="date">2026-11-17</span>  </span><span class="info"><i class="fa fa-tag"></i> <a href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/" title="微积分">微积分</a>  </span><span class="info"><i class="fa fa-tag"></i> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="学习笔记">学习笔记</a>  </span></section></article><p class="pagination"><a href="/2026/11/14/%E6%88%91%E6%98%AF%E5%93%AA%E9%87%8C%E4%BA%BA/" title="我是哪里人">下一篇</a></p><article class="comment-container"><div class="utterances-wrap"><script src="https://utteranc.es/client.js" repo="Karjalannn/Karjalannn.github.io" issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async></script><script>
+(function () {
+  function currentTheme() {
+    var t = document.querySelector('html').getAttribute('theme');
+    if (t === 'dark') return "github-dark";
+    if (t === 'light') return "github-light";
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? "github-dark" : "github-light";
+  }
+  function sync() {
+    var frame = document.querySelector('iframe.utterances-frame');
+    if (!frame || !frame.contentWindow) return;
+    frame.contentWindow.postMessage({ type: 'set-theme', theme: currentTheme() }, 'https://utteranc.es');
+  }
+  window.addEventListener('message', function (e) {
+    if (e.origin !== 'https://utteranc.es') return;
+    sync();
+  });
+  var toggle = document.querySelector('a[href^="javascript:SoSimple.darkLightToggle"]');
+  if (toggle) toggle.addEventListener('click', function () { setTimeout(sync, 200); });
+  setTimeout(sync, 1200);
+
+  // 8 秒后还没长出高度，多半是没装 App 或被网络拦了，给个说明而不是一片空白
+  setTimeout(function () {
+    var frame = document.querySelector('iframe.utterances-frame');
+    var box = document.querySelector('.utterances-wrap');
+    if (!box || box.querySelector('.comment-hint')) return;
+    if (!frame || frame.offsetHeight < 10) {
+      var p = document.createElement('p');
+      p.className = 'comment-hint';
+      p.innerHTML = '评论加载失败：请确认已给仓库安装 ' +
+        '<a href="https://github.com/apps/utterances" target="_blank" rel="noopener">utterances App</a>' +
+        '，或检查网络是否能访问 utteranc.es。';
+      box.appendChild(p);
+    }
+  }, 8000);
+})();
+</script></div></article></main><footer class="footer"><br><p class="powered_by">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> and <a target="_blank" rel="noopener" href="https://github.com/Lhcfl/hexo-theme-sosimple">SoSimple</a></p></footer><link rel="stylesheet" href="/lib/katex/katex.min.css">
+<script defer src="/lib/katex/katex.min.js"></script>
+<script defer src="/lib/katex/contrib/auto-render.min.js" onload="if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false,strict:false,ignoredTags:['script','noscript','style','textarea','pre','code']});}"></script>
+</body></html>
